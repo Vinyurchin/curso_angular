@@ -17,4 +17,6 @@ export class LabsComponent {
     'Crear componentes',
     'Crear servicio'
   ]
+  name = 'Diego';
+  age = '21';
 }
