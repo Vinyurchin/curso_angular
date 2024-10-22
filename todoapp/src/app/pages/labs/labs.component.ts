@@ -26,4 +26,10 @@ export class LabsComponent {
     age: 21, 
     avatar: 'https://picsum.photos/200'
   }
+  clickHandler() {
+    alert('Hola');
+  }
+  changeHandler(event: Event) {
+    console.log(event);
+  }
 }
