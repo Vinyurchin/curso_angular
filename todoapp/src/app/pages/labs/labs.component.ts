@@ -19,4 +19,11 @@ export class LabsComponent {
   ]
   name = 'Diego';
   age = '21';
+  disabled = true;
+  img="https://picsum.photos/200"
+  person = {
+    name: 'Diego',
+    age: 21, 
+    avatar: 'https://picsum.photos/200'
+  }
 }
