@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { signal } from '@angular/core';
 
 @Component({
   selector: 'app-labs',
@@ -16,11 +17,12 @@ export class LabsComponent {
     'Crear proyecto',
     'Crear componentes',
     'Crear servicio'
-  ]
-  name = 'Diego';
+  ];
+  name = signal('Diego');
   age = '21';
   disabled = true;
   img="https://picsum.photos/200"
+  
   person = {
     name: 'Diego',
     age: 21, 
@@ -30,7 +32,9 @@ export class LabsComponent {
     alert('Hola');
   }
   changeHandler(event: Event) {
-    console.log(event);
+    const input = event.target as HTMLInputElement;
+    const newValue = input.value;
+    this.name.set(newValue);
   }
 
   keydownHandler(event: KeyboardEvent) {
