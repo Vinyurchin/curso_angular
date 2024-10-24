@@ -12,17 +12,19 @@ import { signal } from '@angular/core';
 })
 export class LabsComponent {
   welcome = 'hola';
-  tareas = [
+
+  tasks = signal ([
     'Instalar el Angular CLI',
     'Crear proyecto',
     'Crear componentes',
     'Crear servicio'
-  ];
+  ]);
+  
   name = signal('Diego');
   age = '21';
   disabled = true;
   img="https://picsum.photos/200"
-  
+
   person = {
     name: 'Diego',
     age: 21, 
